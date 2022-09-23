@@ -2,29 +2,22 @@
 # Iterating Over Data
 # Problem-Set While Loops #11
 def silly_sum():
-    """ reads numbers from the user (use input_int) 
+    """ reads numbers from the user
         summing as we go until either
         the user enters 0, or
         the sum reaches or exceeds 1000
     """
-    pass
-def most_common_value(number_list):
-    """ returns the most common element of the list
-    """
-    frequency_index = {}
-    max_frequency = -1
-    most_common_value = None
-    for num in number_list:
-        if frequency_index.get(num):
-            frequency_index[num] += 1
-        else:
-            frequency_index[num] = 1
+    num = int(input('Please enter a number => '))
+    sum = 0
 
-        if max_frequency < frequency_index[num]:
-            max_frequency = frequency_index[num]
-            most_common_value = num
+    while num != 0:
+        sum += num
+        if sum >= 1000:
+            break
 
-    return most_common_value
+        num = int(input('Please enter a number => '))
+
+    return sum
 
 if __name__ == "__main__":
     print(f"Answer = {silly_sum()}")
